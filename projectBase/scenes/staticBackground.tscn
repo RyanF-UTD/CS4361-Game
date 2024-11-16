@@ -7,5 +7,6 @@
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Staticbackground" type="Sprite2D" parent="."]
-position = Vector2(705, 316)
+position = Vector2(516, 353)
+scale = Vector2(0.906771, 0.890451)
 texture = ExtResource("1_mpqsm")

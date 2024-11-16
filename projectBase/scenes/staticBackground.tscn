@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cek13sp26i00v"]
+
+[ext_resource type="Texture2D" uid="uid://x0686a0uicws" path="res://assets/staticbackground.png" id="1_mpqsm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Staticbackground" type="Sprite2D" parent="."]
+position = Vector2(516, 353)
+scale = Vector2(0.906771, 0.890451)
+texture = ExtResource("1_mpqsm")

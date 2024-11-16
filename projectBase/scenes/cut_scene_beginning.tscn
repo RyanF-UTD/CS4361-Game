@@ -1,0 +1,948 @@
+[gd_scene load_steps=9 format=3 uid="uid://ivjaawkc1p4l"]
+
+[ext_resource type="Texture2D" uid="uid://c8arg5vpn2la4" path="res://assets/outside_coop.webp" id="1_4yng2"]
+[ext_resource type="Texture2D" uid="uid://b75lfes705nc2" path="res://assets/inside_coop.webp" id="2_8hjr4"]
+[ext_resource type="Texture2D" uid="uid://skkiq18ejya4" path="res://assets/cow.webp" id="3_5p736"]
+[ext_resource type="Texture2D" uid="uid://ddq1m7xco04ga" path="res://assets/abduction.webp" id="4_kknjv"]
+[ext_resource type="Texture2D" uid="uid://blih5id7cgpas" path="res://assets/forest.webp" id="5_dmo0f"]
+
+[sub_resource type="Animation" id="Animation_ge48b"]
+resource_name = "cutscene_beginning"
+length = 26.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.25, 1.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1461, 1365)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3, -9), Vector2(-133, -576)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_inside:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.03333, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_inside:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.03333, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1455, 1304), Vector2(1455, 1304)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_inside:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.03333, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3, -222), Vector2(-6, -502)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/ColorRect/cow:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 7.03333, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/ColorRect/cow:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(7.03333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-284, -105)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer/ColorRect/cow:size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(7.03333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1404, 1047)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationPlayer/ColorRect/cow:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(7.03333, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.211, 1.211)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(207, 516)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(388, 43)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel:text")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.2, 0.233333, 0.266667, 0.3, 0.366667, 0.4, 0.5, 0.566667, 0.6, 0.666667, 0.733333, 0.766667, 0.8, 0.833333, 0.9, 0.933333, 0.966667, 1, 1.03333, 1.06667, 1.1, 1.16667, 1.2, 1.23333, 1.3, 1.33333, 1.36667, 1.43333, 1.46667, 1.5, 1.53333, 1.66667, 2.03333, 2.33333, 2.63333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I
+", "It
+", "It 
+", "It w
+", "It wa
+", "It was 
+", "It was a 
+", "It was a p
+", "It was a pe
+", "It was a pea
+", "It was a peac
+", "It was a peace
+", "It was a peacef
+", "It was a peacefu
+", "It was a peaceful
+", "It was a peaceful 
+", "It was a peaceful n
+", "It was a peaceful ni
+", "It was a peaceful nig
+", "It was a peaceful nigh
+", "It was a peaceful night
+", "It was a peaceful night 
+", "It was a peaceful night o
+", "It was a peaceful night on
+", "It was a peaceful night on 
+", "It was a peaceful night on t
+", "It was a peaceful night on th
+", "It was a peaceful night on the
+", "It was a peaceful night on the f
+", "It was a peaceful night on the fa
+", "It was a peaceful night on the far
+", "It was a peaceful night on the farm
+", "It was a peaceful night on the farm .
+", "It was a peaceful night on the farm ..
+", "It was a peaceful night on the farm ...
+", "It was a peaceful night on the farm ..
+", "It was a peaceful night on the farm ...
+", "It was a peaceful night on the farm ..
+", "It was a peaceful night on the farm ..
+", "It was a peaceful night on the farm ..
+", "It was a peaceful night on the farm .."]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel2:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 3.96667, 7.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel2:text")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(3.96667, 4, 4.03333, 4.06667, 4.1, 4.13333, 4.16667, 4.2, 4.26667, 4.3, 4.36667, 4.4, 4.43333, 4.46667, 4.5, 4.56667, 4.6, 4.63333, 4.66667, 4.7, 4.73333, 4.76667, 4.8, 4.86667, 4.93333, 5.03333, 5.06667, 5.13333, 5.2, 5.26667, 5.3, 5.36667, 5.4, 5.43333, 5.46667, 5.53333, 5.56667, 5.6, 5.66667, 5.76667, 5.9, 6, 6.1, 6.2, 6.26667, 6.36667, 6.46667, 6.56667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["T
+", "Th
+", "The
+", "The 
+", "The c
+", "The ch
+", "The chi
+", "The chic
+", "The chick
+", "The chicke
+", "The chicken
+", "The chicken 
+", "The chicken w
+", "The chicken wa
+", "The chicken was
+", "The chicken was 
+", "The chicken was s
+", "The chicken was so
+", "The chicken was sou
+", "The chicken was soun
+", "The chicken was sound
+", "The chicken was sound 
+", "The chicken was sound a
+", "The chicken was sound as
+", "The chicken was sound asl
+", "The chicken was sound asle
+", "The chicken was sound aslee
+", "The chicken was sound asleep
+", "The chicken was sound asleep
+", "The chicken was sound asleep u
+", "The chicken was sound asleep un
+", "The chicken was sound asleep unt
+", "The chicken was sound asleep unti
+", "The chicken was sound asleep until
+", "The chicken was sound asleep until 
+", "The chicken was sound asleep until .
+", "The chicken was sound asleep until ..
+", "The chicken was sound asleep until ...
+", "The chicken was sound asleep until ..
+", "The chicken was sound asleep until ...
+", "The chicken was sound asleep until ..
+", "The chicken was sound asleep until ...
+", "The chicken was sound asleep until ..
+", "The chicken was sound asleep until ...
+", "The chicken was sound asleep until ..
+", "The chicken was sound asleep until ...
+", "The chicken was sound asleep until ..
+", "The chicken was sound asleep until ...
+"]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel3:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 7.03333, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel3:text")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(7.16667, 7.23333, 7.3, 7.33333, 7.4, 7.5, 7.56667, 7.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["I", "It", "It ", "It c", "It ca", "It cam", "It came", "It came."]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimationPlayer/ColorRect/abduction:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 10, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel4:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 10.1333, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel4:text")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(10.1333, 10.4, 10.6, 10.7667, 10.9667, 11.1667, 11.4, 11.4667, 11.6333, 11.7333, 11.8, 11.9667, 12, 12.2333, 12.5667, 12.6667, 12.9, 13.0333, 13.2, 13.3333, 13.5333, 13.6333, 13.8, 13.9667, 14.0333, 14.1, 14.3667, 14.4667, 14.5333, 14.8667, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["A", "An", "And", "And ", "And t", "And to", "And too", "And took", "And took", "And took t", "And took th", "And took the", "And took the ", "And took the c", "And took the ch", "And took the chi", "And took the chic", "And took the chick", "And took the chicke", "And took the chicken", "And took the chicken ", "And took the chicken a", "And took the chicken aw", "And took the chicken awa", "And took the chicken away", "And took the chicken away", "And took the chicken away .", "And took the chicken away ..", "And took the chicken away ...", "And took the chicken away ..", "And took the chicken away ..."]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AnimationPlayer/ColorRect/abduction:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(10.0667, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -121), Vector2(-5, -6)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel4:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(10.0667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(198, 515)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("AnimationPlayer/ColorRect/TextureRect:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 16, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("AnimationPlayer/ColorRect/TextureRect:scale")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(16),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel5:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 16, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel5:text")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(16.2, 16.4333, 16.5, 16.5667, 16.6667, 16.7333, 16.9333, 17.0333, 17.2333, 17.3, 17.4333, 17.5, 17.6333, 17.9333, 18.2333, 18.5, 18.6667, 18.8, 19.0667, 19.2667, 19.3333, 19.6, 19.7667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["T", "Th", "Tha", "Than", "Thank", "Thankf", "Thankfu", "Thankful", "Thankfull", "Thankfully", "Thankfully h", "Thankfully he", "Thankfully he e", "Thankfully he es", "Thankfully he esc", "Thankfully he esca", "Thankfully he escap", "Thankfully he escape", "Thankfully he escaped", "Thankfully he escaped .", "Thankfully he escaped ..", "Thankfully he escaped ...", "Thankfully he escaped .."]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel6:visible")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 20.0667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel6:text")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(20.2667, 20.3, 20.5333, 20.6, 20.8667, 21.1, 21.2333, 21.5, 21.6, 21.7333, 21.9, 21.9667, 22.2667, 22.3667, 22.5, 22.7333, 22.8667, 23, 23.2333, 23.3667, 23.4667, 23.7, 23.9, 24.0667, 24.2667, 24.6667, 24.8667, 25.0667, 25.3667, 25.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Ca", "C", "Ca", "Can", "Can y", "Can yo", "Can you", "Can you h", "Can you he", "Can you hel", "Can you help h", "Can you help", "Can you help h", "Can you help th", "Can you help hi", "Can you help him", "Can you help him f", "Can you help him fi", "Can you help him fin", "Can you help him find", "Can you help him find h", "Can you help him find hi", "Can you help him find his", "Can you help him find his w", "Can you help him find his wa", "Can you help him find his way h", "Can you help him find his way ho", "Can you help him find his way hom", "Can you help him find his way home", "Can you help him find his way home?"]
+}
+
+[sub_resource type="Animation" id="Animation_lmhw7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-167, -699)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1461, 1365)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_outside:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_inside:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_inside:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6, -502)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/ColorRect/chicken_coop_inside:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1455, 1304)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/ColorRect/cow:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/ColorRect/cow:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.55, 1.55)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer/ColorRect/cow:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-200, -84)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationPlayer/ColorRect/cow:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1404, 1047)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["It
+"]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel2:text")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Th
+"]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel3:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel3:text")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["It"]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimationPlayer/ColorRect/abduction:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel4:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel4:text")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["An"]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimationPlayer/ColorRect/abduction:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5, -6)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimationPlayer/ColorRect/TextureRect:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel5:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel5:text")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Th"]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel6:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("AnimationPlayer/ColorRect/RichTextLabel6:text")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["C"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8n4bd"]
+_data = {
+"RESET": SubResource("Animation_lmhw7"),
+"cutscene_beginning": SubResource("Animation_ge48b")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_8n4bd")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_children = 1
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 1150.0
+offset_bottom = 643.0
+color = Color(0.242966, 0.242966, 0.242966, 1)
+
+[node name="chicken_coop_outside" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -9.0
+offset_right = 1458.0
+offset_bottom = 1356.0
+texture = ExtResource("1_4yng2")
+
+[node name="chicken_coop_inside" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_left = -3.0
+offset_top = -222.0
+offset_right = 1452.0
+offset_bottom = 1082.0
+texture = ExtResource("2_8hjr4")
+
+[node name="cow" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_left = -284.0
+offset_top = -105.0
+offset_right = 1120.0
+offset_bottom = 942.0
+texture = ExtResource("3_5p736")
+
+[node name="abduction" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_top = -121.0
+offset_right = 1182.0
+offset_bottom = 903.0
+texture = ExtResource("4_kknjv")
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 776.0
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_dmo0f")
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 464.0
+offset_right = 1090.0
+offset_bottom = 618.0
+color = Color(0, 0, 0, 0.301961)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = 197.0
+offset_right = 22.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "I
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = 197.0
+offset_right = 22.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "T
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = 197.0
+offset_right = 22.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "I"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = 196.0
+offset_right = 13.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "A"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = 196.0
+offset_right = 13.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "T"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = 196.0
+offset_right = 13.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "Ca"

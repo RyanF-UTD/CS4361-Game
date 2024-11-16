@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://54ilrc6hv0nh"]
+
+[ext_resource type="Script" path="res://egg.gd" id="1_bvosd"]
+[ext_resource type="Texture2D" uid="uid://cytw1m42vgju2" path="res://assets/egg.png" id="2_utvtw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_texb3"]
+
+[node name="Egg" type="Area2D"]
+script = ExtResource("1_bvosd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(0.03625, 0.0370833)
+texture = ExtResource("2_utvtw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_texb3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

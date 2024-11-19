@@ -1343,6 +1343,9 @@ shape = SubResource("SegmentShape2D_8sutm")
 position = Vector2(120, -43)
 shape = SubResource("SegmentShape2D_8sutm")
 
+[node name="moving platform" type="AnimatableBody2D" parent="TileMapLayer"]
+position = Vector2(-46, 155)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(156, -2)
 

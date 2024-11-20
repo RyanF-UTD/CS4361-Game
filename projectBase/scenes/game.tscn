@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://brt4g5cxmwkpw" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/summer_.png" id="3_2lx3b"]
 [ext_resource type="Texture2D" uid="uid://d1m5o3dpocayr" path="res://assets/Free/Terrain/Terrain (16x16).png" id="3_164gy"]
 [ext_resource type="Texture2D" uid="uid://h3xemaiqhg05" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/winter_.png" id="4_afd6r"]
-[ext_resource type="PackedScene" path="res://scenes/backgroundchar.tscn" id="4_tdx3a"]
+[ext_resource type="PackedScene" uid="uid://ds2oney5bbvnf" path="res://scenes/backgroundchar.tscn" id="4_tdx3a"]
 [ext_resource type="Texture2D" uid="uid://bjs4yflhs5krp" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/spring_.png" id="5_r1lhp"]
 [ext_resource type="Texture2D" uid="uid://c7uslatdr6rnl" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/objects_/staticObjects_.png" id="6_6b0tg"]
 [ext_resource type="PackedScene" uid="uid://bm5jhtdxyfj3k" path="res://scenes/Egg.tscn" id="9_vlajb"]
@@ -1362,7 +1362,7 @@ motion_scale = Vector2(0.05, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
 
 [node name="background photo" parent="ParallaxBackground2/ParallaxLayer/Sprite2D" instance=ExtResource("4_tdx3a")]
-position = Vector2(-520, -431)
+position = Vector2(-547, -149)
 
 [node name="player" parent="." instance=ExtResource("10_if28n")]
 position = Vector2(-265, 362)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bd3gbmm5brlyy"]
+[gd_scene load_steps=24 format=4 uid="uid://bd3gbmm5brlyy"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_y6hq6"]
 [ext_resource type="Texture2D" uid="uid://bdp2vin3flhjv" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/foreground_/foreground_.png" id="2_6do5e"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bm5jhtdxyfj3k" path="res://scenes/Egg.tscn" id="9_vlajb"]
 [ext_resource type="PackedScene" uid="uid://ctjnn7cipr0kp" path="res://scenes/playerChicken.tscn" id="10_if28n"]
 [ext_resource type="PackedScene" uid="uid://cnkul0j15bw4r" path="res://scenes/hud.tscn" id="11_jskt3"]
+[ext_resource type="PackedScene" uid="uid://bb5bgm37xuuoy" path="res://scenes/Wolf.tscn" id="12_uvsdl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ow5s3"]
 
@@ -1295,6 +1296,8 @@ b = Vector2(16, 9)
 position = Vector2(295, 155)
 script = ExtResource("1_y6hq6")
 
+[node name="enemies" type="Node2D" parent="."]
+
 [node name="eggs" type="Node2D" parent="."]
 
 [node name="Egg6" parent="eggs" groups=["eggs"] instance=ExtResource("9_vlajb")]
@@ -1359,10 +1362,12 @@ motion_scale = Vector2(0.05, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
 
 [node name="background photo" parent="ParallaxBackground2/ParallaxLayer/Sprite2D" instance=ExtResource("4_tdx3a")]
-visible = false
 position = Vector2(-520, -431)
 
 [node name="player" parent="." instance=ExtResource("10_if28n")]
 position = Vector2(-265, 362)
 
 [node name="HUD" parent="." instance=ExtResource("11_jskt3")]
+
+[node name="Wolf" parent="." instance=ExtResource("12_uvsdl")]
+position = Vector2(564, 468)

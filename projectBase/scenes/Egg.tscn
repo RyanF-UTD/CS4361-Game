@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm5jhtdxyfj3k"]
 
-[ext_resource type="Script" path="res://egg.gd" id="1_7l08k"]
+[ext_resource type="Script" path="res://scripts/egg.gd" id="1_7l08k"]
 [ext_resource type="Texture2D" uid="uid://j83u4bh31l28" path="res://assets/egg.png" id="2_fmrpt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_es1p4"]

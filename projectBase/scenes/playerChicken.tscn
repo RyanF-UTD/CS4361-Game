@@ -139,10 +139,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3ds06"]
-radius = 4.49814
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jelua"]
+size = Vector2(5.99272, 5.18565)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 disable_mode = 2
 input_pickable = true
 script = ExtResource("1_2j1nv")
@@ -152,12 +152,12 @@ texture_filter = 1
 position = Vector2(0, 8)
 scale = Vector2(0.423737, 0.687679)
 sprite_frames = SubResource("SpriteFrames_buka8")
-animation = &"run"
+animation = &"dead"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(0, 32)
 scale = Vector2(5.33981, 6.17088)
-shape = SubResource("CircleShape2D_3ds06")
+shape = SubResource("RectangleShape2D_jelua")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(6, 9)

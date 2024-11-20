@@ -1,15 +1,15 @@
-[gd_scene load_steps=23 format=4 uid="uid://bd3gbmm5brlyy"]
+[gd_scene load_steps=22 format=4 uid="uid://bd3gbmm5brlyy"]
 
-[ext_resource type="PackedScene" uid="uid://ctjnn7cipr0kp" path="res://scenes/player.tscn" id="1_r2pjk"]
 [ext_resource type="Texture2D" uid="uid://bdp2vin3flhjv" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/foreground_/foreground_.png" id="2_6do5e"]
 [ext_resource type="Texture2D" uid="uid://brt4g5cxmwkpw" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/summer_.png" id="3_2lx3b"]
 [ext_resource type="Texture2D" uid="uid://d1m5o3dpocayr" path="res://assets/Free/Terrain/Terrain (16x16).png" id="3_164gy"]
 [ext_resource type="Texture2D" uid="uid://h3xemaiqhg05" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/winter_.png" id="4_afd6r"]
-[ext_resource type="PackedScene" uid="uid://ds2oney5bbvnf" path="res://scenes/backgroundchar.tscn" id="4_tdx3a"]
+[ext_resource type="PackedScene" path="res://scenes/backgroundchar.tscn" id="4_tdx3a"]
 [ext_resource type="Texture2D" uid="uid://bjs4yflhs5krp" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/spring_.png" id="5_r1lhp"]
 [ext_resource type="Texture2D" uid="uid://c7uslatdr6rnl" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/objects_/staticObjects_.png" id="6_6b0tg"]
 [ext_resource type="PackedScene" uid="uid://bm5jhtdxyfj3k" path="res://Egg.tscn" id="9_vlajb"]
 [ext_resource type="Texture2D" uid="uid://j83u4bh31l28" path="res://assets/egg.png" id="10_hdvrj"]
+[ext_resource type="PackedScene" uid="uid://ctjnn7cipr0kp" path="res://scenes/playerChicken.tscn" id="10_if28n"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ow5s3"]
 
@@ -1290,34 +1290,6 @@ b = Vector2(16, 9)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ivg44"]
 
-[sub_resource type="GDScript" id="GDScript_o7i02"]
-script/source = "extends CharacterBody2D
-
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
-"
-
 [node name="game" type="Node2D"]
 position = Vector2(295, 155)
 
@@ -1355,13 +1327,6 @@ position = Vector2(156, -2)
 position = Vector2(8, 499)
 shape = SubResource("WorldBoundaryShape2D_ivg44")
 
-[node name="player" parent="." instance=ExtResource("1_r2pjk")]
-position = Vector2(-645, 424)
-script = SubResource("GDScript_o7i02")
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(313, -42)
-
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
@@ -1373,10 +1338,6 @@ motion_scale = Vector2(0.05, 0)
 
 [node name="background photo" parent="ParallaxBackground2/ParallaxLayer/Sprite2D" instance=ExtResource("4_tdx3a")]
 position = Vector2(-520, -431)
-
-[node name="Camera2D" type="Camera2D" parent="ParallaxBackground2/ParallaxLayer/Sprite2D"]
-position = Vector2(953, 351)
-drag_horizontal_enabled = true
 
 [node name="Area2D" parent="." instance=ExtResource("9_vlajb")]
 position = Vector2(-106, 188)
@@ -1404,3 +1365,6 @@ texture = ExtResource("10_hdvrj")
 [node name="Egg3" type="Sprite2D" parent="."]
 position = Vector2(5781, 461)
 texture = ExtResource("10_hdvrj")
+
+[node name="player" parent="." instance=ExtResource("10_if28n")]
+position = Vector2(-257, 283)

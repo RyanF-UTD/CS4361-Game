@@ -145,8 +145,8 @@ texture_filter = 1
 position = Vector2(-2, -1)
 scale = Vector2(0.781903, 0.583333)
 sprite_frames = SubResource("SpriteFrames_tx8s3")
-animation = &"attack"
-frame_progress = 0.997735
+animation = &"run"
+frame_progress = 0.818171
 
 [node name="Detection" type="Area2D" parent="."]
 

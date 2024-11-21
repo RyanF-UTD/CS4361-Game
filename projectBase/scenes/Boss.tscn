@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://bms3okmqrtaw8"]
+[gd_scene load_steps=22 format=3 uid="uid://bms3okmqrtaw8"]
 
+[ext_resource type="Script" path="res://scenes/boss.gd" id="1_7nbgx"]
 [ext_resource type="Texture2D" uid="uid://b33qp052dh5il" path="res://assets/Screenshot_2024-11-15_231818-removebg-preview.png" id="1_cqt2e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eny3w"]
@@ -46,21 +47,21 @@ region = Rect2(173, 154, 67, 44)
 atlas = ExtResource("1_cqt2e")
 region = Rect2(240, 154, 67, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6dw1b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr41n"]
 atlas = ExtResource("1_cqt2e")
-region = Rect2(79, 52, 55, 52)
+region = Rect2(240, 52, 60, 52)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4mte"]
 atlas = ExtResource("1_cqt2e")
 region = Rect2(134, 52, 55, 52)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dw1b"]
+atlas = ExtResource("1_cqt2e")
+region = Rect2(79, 52, 55, 52)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xx4yt"]
 atlas = ExtResource("1_cqt2e")
 region = Rect2(180, 52, 60, 52)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr41n"]
-atlas = ExtResource("1_cqt2e")
-region = Rect2(240, 52, 60, 52)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4alm"]
 atlas = ExtResource("1_cqt2e")
@@ -109,6 +110,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack_Side",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr41n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4mte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr41n")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -142,22 +160,49 @@ animations = [{
 "loop": true,
 "name": &"Flying",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx4yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr41n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4alm")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bskch"]
+radius = 12.0921
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gscs0"]
+radius = 502.673
 
 [node name="Boss" type="CharacterBody2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_7nbgx")
+metadata/_edit_group_ = true
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(210, 138)
 scale = Vector2(5.73636, 4.84615)
 sprite_frames = SubResource("SpriteFrames_l5wal")
-animation = &"Flying"
-frame = 1
-frame_progress = 0.780294
+animation = &"Attack_Side"
+frame = 4
+frame_progress = 0.438351
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(240, 152)
+position = Vector2(245, 145)
 scale = Vector2(5.73636, 4.84615)
 shape = SubResource("CircleShape2D_bskch")
+
+[node name="Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+position = Vector2(241, 143)
+shape = SubResource("CircleShape2D_gscs0")

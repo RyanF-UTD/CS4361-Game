@@ -1373,7 +1373,7 @@ motion_scale = Vector2(0.05, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
 
 [node name="background photo" parent="ParallaxBackground2/ParallaxLayer/Sprite2D" instance=ExtResource("4_tdx3a")]
-position = Vector2(-520, -431)
+position = Vector2(-547, -149)
 
 [node name="player" parent="." instance=ExtResource("10_if28n")]
 position = Vector2(-265, 362)

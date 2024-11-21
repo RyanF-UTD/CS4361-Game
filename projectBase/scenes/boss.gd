@@ -10,7 +10,9 @@ func _ready():
 	# Connect signals
 	$Detection.connect("body_entered", Callable(self, "_on_area_body_entered"))
 	$Detection.connect("body_exited", Callable(self, "_on_area_body_exited"))
-
+	$Hitbox.connect("body_entered", Callable(self, "_on_hitbox_entered"))
+	$AttackRadiusRight.connect("body_entered",Callable(self, "_on_attackRadiusRightEntered"))
+	$AttackRadiusLeft.connect("body_entered",Callable(self, "_on_attackRadiusLeftEntered"))
 func _physics_process(delta):
 		# Apply gravity
 	if not is_on_floor():
@@ -46,6 +48,12 @@ func flying_logic():
 
 # Logic for attacking state
 func attacking_logic():
+	var direction = (player.global_position - global_position).normalized()
+	velocity.x = direction.x * CHASE_SPEED
+	if direction.x < 0:
+		$Animation.flip_h = true
+	elif direction.x > 0:
+		$Animation.flip_h = false
 	$Animation.play("Attack_Side")
 	velocity = Vector2.ZERO
 
@@ -61,9 +69,15 @@ func _on_area_body_exited(body):
 		player = null
 		state = "Idle"
 
-
-# Signal: Detect collision with the player
-func _on_body_entered(body):
+# Signal: Detect attack radius
+func _on_attackRadiusRightEntered(body):
 	if body.is_in_group("Player") and state == "Flying":
 		state = "Attack_Side"
+		
+func _on_attackRadiusLeftEntered(body):
+	if body.is_in_group("Player") and state == "Flying":
+		state = "Attack_Side"
+# Signal: Detect collision with the player
+func _on_hitbox_entered(body):
+	if body.is_in_group("Player") and state == "Attack_Side":
 		body.die()

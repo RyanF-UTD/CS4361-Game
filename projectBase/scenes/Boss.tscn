@@ -1,7 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://bms3okmqrtaw8"]
+[gd_scene load_steps=24 format=3 uid="uid://bms3okmqrtaw8"]
 
 [ext_resource type="Script" path="res://scenes/boss.gd" id="1_7nbgx"]
 [ext_resource type="Texture2D" uid="uid://b33qp052dh5il" path="res://assets/Screenshot_2024-11-15_231818-removebg-preview.png" id="1_cqt2e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pklej"]
+radius = 58.7272
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eny3w"]
 atlas = ExtResource("1_cqt2e")
@@ -177,15 +180,22 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bskch"]
-radius = 12.0921
+radius = 18.8293
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gscs0"]
 radius = 502.673
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1l52p"]
+radius = 62.7234
+
 [node name="Boss" type="CharacterBody2D"]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_7nbgx")
-metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(204, 148)
+shape = SubResource("CircleShape2D_pklej")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -193,16 +203,34 @@ position = Vector2(210, 138)
 scale = Vector2(5.73636, 4.84615)
 sprite_frames = SubResource("SpriteFrames_l5wal")
 animation = &"Attack_Side"
-frame = 4
-frame_progress = 0.438351
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(245, 145)
+[node name="Hitbox" type="Area2D" parent="."]
+position = Vector2(342.667, 18.6667)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-98.6667, 128)
 scale = Vector2(5.73636, 4.84615)
 shape = SubResource("CircleShape2D_bskch")
 
 [node name="Detection" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
 position = Vector2(241, 143)
 shape = SubResource("CircleShape2D_gscs0")
+
+[node name="AttackRadiusRight" type="Area2D" parent="."]
+visible = false
+position = Vector2(12, 1.33333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRadiusRight"]
+position = Vector2(301.333, 146.667)
+shape = SubResource("CircleShape2D_1l52p")
+
+[node name="AttackRadiusLeft" type="Area2D" parent="."]
+visible = false
+position = Vector2(12, 1.33333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRadiusLeft"]
+position = Vector2(172, 145.333)
+shape = SubResource("CircleShape2D_1l52p")

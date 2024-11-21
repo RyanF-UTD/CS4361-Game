@@ -161,3 +161,9 @@ shape = SubResource("RectangleShape2D_jelua")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(6, 9)
+
+[node name="Respawn" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Respawn" to="." method="_on_respawn_timeout"]

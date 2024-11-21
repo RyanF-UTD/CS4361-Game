@@ -9,6 +9,11 @@ const ACCELERATION = 1200  # How quickly the character reaches full speed
 # State definitions
 enum PlayerState { IDLE, WALKING, JUMPING, DEAD }
 var current_state = PlayerState.IDLE
+var start_position: Vector2
+
+func _ready():
+	# Store the player's starting position
+	start_position = global_position
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -52,3 +57,13 @@ func _physics_process(delta: float) -> void:
 
 	# Apply movement
 	move_and_slide()
+
+func die():
+	print("Player has died!")
+	current_state = PlayerState.DEAD
+	velocity = Vector2.ZERO  # Stop movement
+	$Respawn.start()  # Start the reset timer
+
+func _on_respawn_timeout() -> void:
+	# Reset the player's position after the timer
+	global_position = start_position

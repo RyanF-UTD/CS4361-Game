@@ -38,6 +38,8 @@ func idle_logic():
 # Logic for barking state
 func barking_logic():
 	$Animation.play("bark")
+	if not $Audio.playing:
+		$Audio.play()
 
 # Logic for chasing state
 func chasing_logic():
@@ -80,3 +82,4 @@ func _on_timer_timeout():
 func _on_body_entered(body):
 	if body.is_in_group("Player") and state == "chasing":
 		state = "attacking"
+		body.die()

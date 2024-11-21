@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://bb5bgm37xuuoy"]
+[gd_scene load_steps=19 format=3 uid="uid://bb5bgm37xuuoy"]
 
 [ext_resource type="Script" path="res://scripts/wolf.gd" id="1_egesn"]
 [ext_resource type="Texture2D" uid="uid://dkhb16cydogu5" path="res://assets/Screenshot_2024-11-15_223238-removebg-preview.png" id="1_v6bmu"]
+[ext_resource type="AudioStream" uid="uid://dpt4u8qxofmv6" path="res://assets/Barking.wav" id="3_a6a06"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkfwb"]
 size = Vector2(4.7681, 3.96941)
@@ -147,3 +148,6 @@ position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_b2lv3")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_a6a06")

@@ -13,6 +13,8 @@ func _ready():
 	$Detection.connect("body_entered", Callable(self, "_on_area_body_entered"))
 	$Detection.connect("body_exited", Callable(self, "_on_area_body_exited"))
 	$Timer.connect("timeout", Callable(self, "_on_timer_timeout"))
+	$AttackRadius.connect("body_entered",Callable(self, "_on_attackRadiusEntered"))
+	$Hitbox.connect("body_entered", Callable(self, "_on_hitbox_entered"))
 
 func _physics_process(delta):
 		# Apply gravity
@@ -58,7 +60,6 @@ func chasing_logic():
 # Logic for attacking state
 func attacking_logic():
 	$Animation.play("attack")
-	velocity = Vector2.ZERO
 
 # Signal: Player enters detection area
 func _on_area_body_entered(body):
@@ -78,8 +79,12 @@ func _on_timer_timeout():
 	if state == "barking":
 		state = "chasing"
 
-# Signal: Detect collision with the player
-func _on_body_entered(body):
+# Signal: Detect attack radius
+func _on_attackRadiusEntered(body):
 	if body.is_in_group("Player") and state == "chasing":
 		state = "attacking"
+
+		
+func _on_hitbox_entered(body):
+	if body.is_in_group("Player"):
 		body.die()

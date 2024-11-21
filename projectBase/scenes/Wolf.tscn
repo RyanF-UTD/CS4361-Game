@@ -1,11 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://bb5bgm37xuuoy"]
+[gd_scene load_steps=21 format=3 uid="uid://bb5bgm37xuuoy"]
 
 [ext_resource type="Script" path="res://scripts/wolf.gd" id="1_egesn"]
 [ext_resource type="Texture2D" uid="uid://dkhb16cydogu5" path="res://assets/Screenshot_2024-11-15_223238-removebg-preview.png" id="1_v6bmu"]
 [ext_resource type="AudioStream" uid="uid://dpt4u8qxofmv6" path="res://assets/Barking.wav" id="3_a6a06"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkfwb"]
-size = Vector2(4.7681, 3.96941)
+size = Vector2(3.91607, 4.13002)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v4w3a"]
 atlas = ExtResource("1_v6bmu")
@@ -125,12 +125,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2lv3"]
 radius = 200.9
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otgey"]
+size = Vector2(10, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxlvk"]
+size = Vector2(61, 40)
+
 [node name="Wolf" type="CharacterBody2D"]
 position = Vector2(0, 1)
 script = ExtResource("1_egesn")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-1.52588e-05, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.57628e-07, -1.5615)
 scale = Vector2(8.68218, 6.99197)
 shape = SubResource("RectangleShape2D_fkfwb")
 
@@ -139,7 +145,8 @@ texture_filter = 1
 position = Vector2(-2, -1)
 scale = Vector2(0.781903, 0.583333)
 sprite_frames = SubResource("SpriteFrames_tx8s3")
-animation = &"idle"
+animation = &"attack"
+frame_progress = 0.997735
 
 [node name="Detection" type="Area2D" parent="."]
 
@@ -151,3 +158,16 @@ shape = SubResource("CircleShape2D_b2lv3")
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_a6a06")
+volume_db = -10.165
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-21, -3)
+shape = SubResource("RectangleShape2D_otgey")
+
+[node name="AttackRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRadius"]
+position = Vector2(-17.5, -5)
+shape = SubResource("RectangleShape2D_qxlvk")
